@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   gap: 20px;
   padding: 16px;
-  max-width: 700px;   /* ← 700px だと4列が潰れるので拡張 */
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -36,8 +36,8 @@ body {
 /* 武器レイアウト（メイン1 + サブ9） */
 .weapon-layout {
   display: grid;
-  grid-template-columns: 160px 130px 130px 130px; /* ← 幅を広げて崩れ防止 */
-  grid-template-rows: repeat(3, 150px);           /* ← 高さも余裕を持たせる */
+  grid-template-columns: 150px 120px 120px 120px;
+  grid-template-rows: repeat(3, 140px);
   gap: 12px;
   justify-content: center;
 }
@@ -48,10 +48,6 @@ body {
   background: #1f1f1f;
   border: 2px solid #3fa9f5;
   border-radius: 4px;
-  font-size: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* サブ武器 */
@@ -59,10 +55,39 @@ body {
   background: #1f1f1f;
   border: 1px solid #3fa9f5;
   border-radius: 4px;
-  font-size: 18px;
+}
+
+/* 武器枠の中身 */
+.weapon-box {
+  position: relative;
+  padding: 8px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* アイコン画像 */
+.weapon-icon {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #3fa9f5;
+}
+
+/* 武器名・Slv */
+.weapon-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.weapon-name {
+  color: #e0e0e0;
+}
+
+.weapon-slv {
+  color: #3fa9f5;
+  font-weight: bold;
 }
 
 /* 下パネル（ジョブ設定＋計算結果） */
