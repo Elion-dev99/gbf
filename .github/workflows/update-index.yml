@@ -1,0 +1,28 @@
+name: Update weapons index
+
+on:
+  push:
+    paths:
+      - "docs/data/weapons/*.json"
+      - "!docs/data/weapons/index.json"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Generate index.json
+        run: |
+          cd docs/data/weapons
+          ls *.json | grep -v index.json | jq -R -s -c 'split("\n")[:-1]' > index.json
+
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add index.json
+          git commit -m "Auto-update index.json" || echo "No changes"
+          git push
