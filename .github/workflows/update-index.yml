@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - "docs/data/weapons/**"
-      - "!docs/data/weapons/index.json"
 
 jobs:
   build:
@@ -21,17 +20,20 @@ jobs:
 
       - name: Generate index.json
         run: |
-          # weapons フォルダが無ければ終了
+          TARGET="docs/data/weapons/index.json"
+
+          # weapons フォルダが無ければ空配列を作って終了
           if [ ! -d "docs/data/weapons" ]; then
-            echo "[]" > docs/data/weapons/index.json
+            echo "[]" > "$TARGET"
             exit 0
           fi
 
           cd docs/data/weapons || exit 0
 
-          # JSON が無ければ空配列
+          # JSON ファイル一覧を取得（schema と index は除外）
           FILES=$(ls *.json 2>/dev/null | grep -v index.json | grep -v weapon.schema.json || true)
 
+          # 空なら空配列
           if [ -z "$FILES" ]; then
             echo "[]" > index.json
           else
