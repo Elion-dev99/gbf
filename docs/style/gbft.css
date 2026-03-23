@@ -1,11 +1,11 @@
 /* 武器レイアウト（メイン1 + サブ9） */
 .weapon-layout {
-  wigth: 100%;
+  width: 100%;                     /* ← 下パネルと同じ幅にする */
   display: grid;
-  grid-template-columns: 130px 100px 100px 100px;
-  grid-template-rows: repeat(3, 110px);
-  gap: 10px;
-  justify-content: center;
+  grid-template-columns: 110px 85px 85px 85px;  /* ← 枠を小さくした最適値 */
+  grid-template-rows: repeat(3, 90px);          /* ← 高さも縮める */
+  gap: 8px;
+  justify-content: space-between;  /* ← 横幅いっぱいに広げる */
 }
 
 /* メイン武器（縦長3マス） */
