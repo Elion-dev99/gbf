@@ -20,7 +20,10 @@ jobs:
       - name: Generate index.json
         run: |
           cd docs/data/weapons
-          ls *.json | grep -v index.json | jq -R -s -c 'split("\n")[:-1]' > index.json
+          ls *.json \
+            | grep -v index.json \
+            | grep -v weapon.schema.json \
+            | jq -R -s -c 'split("\n")[:-1]' > index.json
 
       - name: Commit changes
         run: |
