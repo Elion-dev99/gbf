@@ -1,5 +1,5 @@
 // JSON 読み込みテスト
-fetch("../data/weapons/weapon.json")  // ← ここは存在する JSON に合わせて変更してOK
+fetch("../data/weapons/dainsleif.json")  // ← ここは存在する JSON に合わせて変更してOK
   .then(res => res.json())
   .then(data => {
     console.log("読み込み成功:", data);
