@@ -1,129 +1,144 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>武器編成</title>
-  <link rel="stylesheet" href="./style/gbft.css">
-</head>
 <body>
-
   <div class="layout">
 
     <!-- タブ -->
     <div class="tabs">
-      <button class="tab active">武器</button>
-      <button class="tab">キャラ</button>
-      <button class="tab">召喚石</button>
+      <div class="tab active">武器編成</div>
+      <div class="tab">ジョブ設定</div>
+      <div class="tab">計算結果</div>
     </div>
 
-    <!-- 武器レイアウト（メイン1 + サブ9） -->
+    <!-- 武器レイアウト -->
     <div class="weapon-layout">
 
-      <!-- メイン武器（縦長） -->
-      <div class="main-weapon weapon-box">
-        <img src="./assets/icons/sample.png" class="weapon-icon">
-        <div class="weapon-info">
-          <span class="weapon-name">メイン武器</span>
-          <span class="weapon-slv">Slv 15</span>
+      <!-- メイン武器 -->
+      <div class="main-weapon">
+        <div class="weapon-box">
+          <img src="./assets/icons/sample.png" class="weapon-icon">
+          <div class="weapon-info">
+            <span class="weapon-name">メイン武器</span>
+            <span class="weapon-slv">Slv 15</span>
+          </div>
         </div>
       </div>
 
-      <!-- サブ武器9枠 -->
-      <div class="sub-weapon weapon-box">
-        <img src="./assets/icons/sample.png" class="weapon-icon">
-        <div class="weapon-info">
-          <span class="weapon-name">武器2</span>
-          <span class="weapon-slv">Slv 10</span>
+      <!-- サブ武器 1〜9 -->
+      <div class="sub-weapon">
+        <div class="weapon-box">
+          <img src="./assets/icons/sample.png" class="weapon-icon">
+          <div class="weapon-info">
+            <span class="weapon-name">武器1</span>
+            <span class="weapon-slv">Slv 10</span>
+          </div>
         </div>
       </div>
 
-      <div class="sub-weapon weapon-box">
-        <img src="./assets/icons/sample.png" class="weapon-icon">
-        <div class="weapon-info">
-          <span class="weapon-name">武器3</span>
-          <span class="weapon-slv">Slv 10</span>
+      <div class="sub-weapon">
+        <div class="weapon-box">
+          <img src="./assets/icons/sample.png" class="weapon-icon">
+          <div class="weapon-info">
+            <span class="weapon-name">武器2</span>
+            <span class="weapon-slv">Slv 10</span>
+          </div>
         </div>
       </div>
 
-      <div class="sub-weapon weapon-box">
-        <img src="./assets/icons/sample.png" class="weapon-icon">
-        <div class="weapon-info">
-          <span class="weapon-name">武器4</span>
-          <span class="weapon-slv">Slv 10</span>
+      <div class="sub-weapon">
+        <div class="weapon-box">
+          <img src="./assets/icons/sample.png" class="weapon-icon">
+          <div class="weapon-info">
+            <span class="weapon-name">武器3</span>
+            <span class="weapon-slv">Slv 10</span>
+          </div>
         </div>
       </div>
 
-      <div class="sub-weapon weapon-box">
-        <img src="./assets/icons/sample.png" class="weapon-icon">
-        <div class="weapon-info">
-          <span class="weapon-name">武器5</span>
-          <span class="weapon-slv">Slv 10</span>
+      <div class="sub-weapon">
+        <div class="weapon-box">
+          <img src="./assets/icons/sample.png" class="weapon-icon">
+          <div class="weapon-info">
+            <span class="weapon-name">武器4</span>
+            <span class="weapon-slv">Slv 10</span>
+          </div>
         </div>
       </div>
 
-      <div class="sub-weapon weapon-box">
-        <img src="./assets/icons/sample.png" class="weapon-icon">
-        <div class="weapon-info">
-          <span class="weapon-name">武器6</span>
-          <span class="weapon-slv">Slv 10</span>
+      <div class="sub-weapon">
+        <div class="weapon-box">
+          <img src="./assets/icons/sample.png" class="weapon-icon">
+          <div class="weapon-info">
+            <span class="weapon-name">武器5</span>
+            <span class="weapon-slv">Slv 10</span>
+          </div>
         </div>
       </div>
 
-      <div class="sub-weapon weapon-box">
-        <img src="./assets/icons/sample.png" class="weapon-icon">
-        <div class="weapon-info">
-          <span class="weapon-name">武器7</span>
-          <span class="weapon-slv">Slv 10</span>
+      <div class="sub-weapon">
+        <div class="weapon-box">
+          <img src="./assets/icons/sample.png" class="weapon-icon">
+          <div class="weapon-info">
+            <span class="weapon-name">武器6</span>
+            <span class="weapon-slv">Slv 10</span>
+          </div>
         </div>
       </div>
 
-      <div class="sub-weapon weapon-box">
-        <img src="./assets/icons/sample.png" class="weapon-icon">
-        <div class="weapon-info">
-          <span class="weapon-name">武器8</span>
-          <span class="weapon-slv">Slv 10</span>
+      <div class="sub-weapon">
+        <div class="weapon-box">
+          <img src="./assets/icons/sample.png" class="weapon-icon">
+          <div class="weapon-info">
+            <span class="weapon-name">武器7</span>
+            <span class="weapon-slv">Slv 10</span>
+          </div>
         </div>
       </div>
 
-      <div class="sub-weapon weapon-box">
-        <img src="./assets/icons/sample.png" class="weapon-icon">
-        <div class="weapon-info">
-          <span class="weapon-name">武器9</span>
-          <span class="weapon-slv">Slv 10</span>
+      <div class="sub-weapon">
+        <div class="weapon-box">
+          <img src="./assets/icons/sample.png" class="weapon-icon">
+          <div class="weapon-info">
+            <span class="weapon-name">武器8</span>
+            <span class="weapon-slv">Slv 10</span>
+          </div>
         </div>
       </div>
 
-      <div class="sub-weapon weapon-box">
-        <img src="./assets/icons/sample.png" class="weapon-icon">
-        <div class="weapon-info">
-          <span class="weapon-name">武器10</span>
-          <span class="weapon-slv">Slv 10</span>
-        </div>
-      </div>
+    </div>
 
-      </div>
-
-    <!-- 下パネル（ジョブ設定＋計算結果） -->
+    <!-- 下パネル（ジョブ設定 + 計算結果） -->
     <div class="bottom-panel">
 
       <div class="panel-section">
-        <h2 class="panel-title">ジョブ設定</h2>
-        <div class="row"><span>ジョブ</span><input type="text"></div>
-        <div class="row"><span>ジョブアビ</span><input type="text"></div>
-        <div class="row"><span>Rank</span><input type="number"></div>
+        <div class="panel-title">ジョブ設定</div>
+
+        <div class="row">
+          <span>ジョブ</span>
+          <input type="text">
+        </div>
+
+        <div class="row">
+          <span>攻撃力</span>
+          <input type="number">
+        </div>
+
       </div>
 
       <div class="panel-section">
-        <h2 class="panel-title">計算結果</h2>
-        <div class="row"><span>表示攻撃力</span><span>0</span></div>
-        <div class="row"><span>予測ダメージ</span><span>0</span></div>
-        <div class="row"><span>クリティカル率</span><span>0%</span></div>
+        <div class="panel-title">計算結果</div>
+
+        <div class="row">
+          <span>総合攻撃力</span>
+          <span>0</span>
+        </div>
+
+        <div class="row">
+          <span>期待値</span>
+          <span>0</span>
+        </div>
+
       </div>
 
     </div>
 
   </div>
-
 </body>
-</html>
