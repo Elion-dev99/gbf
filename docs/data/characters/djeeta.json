@@ -1,0 +1,7 @@
+{
+  "id": "djeeta",
+  "name": "ジータ",
+  "attribute": "light",
+  "weapons": ["sword", "dagger"],
+  "role": "attacker"
+}
