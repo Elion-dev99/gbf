@@ -1,128 +1,47 @@
-/* 全体背景・文字 */
-body {
-  background: #1a1a1a;
-  color: #e0e0e0;
-  font-family: "Noto Sans JP", sans-serif;
-  margin: 0;
-}
-
-/* レイアウト全体（FF14風の基準幅） */
-.layout {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 16px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* タブ */
-.tabs {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-}
-
-.tab {
-  background: #2a2a2a;
-  border: 1px solid #3fa9f5;
-  padding: 6px 14px;
-  color: #e0e0e0;
-}
-
-.tab.active {
-  background: #3fa9f5;
-  color: #000;
-}
-
 /* 武器レイアウト（メイン1 + サブ9） */
-/* ★ここだけ小型化している。他は元のまま。 */
 .weapon-layout {
   display: grid;
-  grid-template-columns: 110px 85px 85px 85px;  /* ← 小型化 */
-  grid-template-rows: repeat(3, 90px);          /* ← 小型化 */
+  grid-template-columns: 110px 85px 85px 85px;  /* ← 枠だけ小型化 */
+  grid-template-rows: repeat(3, 90px);
   gap: 8px;
-  justify-content: center;                      /* ← FF14風中央寄せ */
+  justify-content: center;
 }
 
 /* メイン武器（縦長3マス） */
 .main-weapon {
   grid-row: span 3;
   background: #1f1f1f;
-  border: 2px solid #3fa9f5;
+  border: 2px solid #3fa9f5;   /* ← FF14風の青枠 */
   border-radius: 4px;
 }
 
 /* サブ武器 */
 .sub-weapon {
   background: #1f1f1f;
-  border: 1px solid #3fa9f5;
+  border: 1px solid #3fa9f5;   /* ← FF14風の青枠 */
   border-radius: 4px;
 }
 
-/* 武器枠の中身 */
+/* 武器枠の中身（デザインは元のまま） */
 .weapon-box {
   position: relative;
-  padding: 4px;                 /* ← 小型化に合わせて余白も調整 */
+  padding: 8px;                /* ← これが FF14風の余白。戻す */
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
-/* アイコン画像 */
+/* アイコン画像（縮むけどデザインは壊さない） */
 .weapon-icon {
   width: 100%;
-  height: 100%;
-  object-fit: cover;            /* ← 枠に合わせて縮む */
+  height: auto;
   border-radius: 4px;
   border: 1px solid #3fa9f5;
 }
 
-/* 武器名・Slv */
+/* 武器名・Slv（元のまま） */
 .weapon-info {
   display: flex;
   justify-content: space-between;
-  font-size: 12px;              /* ← 小型化 */
-}
-
-.weapon-name {
-  color: #e0e0e0;
-}
-
-.weapon-slv {
-  color: #3fa9f5;
-  font-weight: bold;
-}
-
-/* 下パネル（ジョブ設定＋計算結果） */
-.bottom-panel {
-  display: flex;
-  gap: 20px;
-  background: #2a2a2a;
-  border-top: 2px solid #3fa9f5;
-  padding: 16px;
-}
-
-.panel-section {
-  flex: 1;
-}
-
-.panel-title {
-  color: #3fa9f5;
-  border-bottom: 1px solid #3fa9f5;
-  margin-bottom: 8px;
-  padding-bottom: 4px;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  margin: 6px 0;
-}
-
-.row input {
-  width: 60%;
-  background: #1f1f1f;
-  border: 1px solid #555;
-  color: #e0e0e0;
+  font-size: 12px;             /* ← 少しだけ小型化 */
 }
