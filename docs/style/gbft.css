@@ -36,7 +36,7 @@ body {
 /* 武器レイアウト（メイン1 + サブ9） */
 .weapon-layout {
   display: grid;
-  grid-template-columns: 180px 150px 150px 150px; /* ← 幅を広げて崩れ防止 */
+  grid-template-columns: 160px 130px 130px 130px; /* ← 幅を広げて崩れ防止 */
   grid-template-rows: repeat(3, 150px);           /* ← 高さも余裕を持たせる */
   gap: 12px;
   justify-content: center;
