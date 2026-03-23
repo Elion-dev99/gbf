@@ -10,8 +10,9 @@ async function main() {
 
   try {
     // ① weapons/index.json を読み込む
-　    const list = await loadJSON("./data/weapons/index.json");
-    //武器データを読み込む
+    const list = await loadJSON("./data/weapons/index.json");
+
+    // 武器データを読み込む
     const weapons = [];
     for (const file of list) {
       const data = await loadJSON(`./data/weapons/${file}`);
