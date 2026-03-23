@@ -8,20 +8,23 @@ body {
 .layout {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 12px;
+  gap: 20px;
+  padding: 16px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* タブ */
 .tabs {
   display: flex;
   gap: 8px;
+  justify-content: center;
 }
 
 .tab {
   background: #2a2a2a;
   border: 1px solid #3fa9f5;
-  padding: 6px 12px;
+  padding: 6px 14px;
   color: #e0e0e0;
 }
 
@@ -30,27 +33,49 @@ body {
   color: #000;
 }
 
-/* 武器枠 */
-.weapon-grid {
+/* 武器レイアウト（メイン1 + サブ9） */
+.weapon-layout {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
+  grid-template-columns: 160px 120px 120px 120px;
+  grid-template-rows: repeat(3, 120px);
+  gap: 12px;
+  justify-content: center;
 }
 
-.weapon-slot {
+/* メイン武器（縦長3マス） */
+.main-weapon {
+  grid-row: span 3;
+  background: #1f1f1f;
+  border: 2px solid #3fa9f5;
+  border-radius: 4px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* サブ武器 */
+.sub-weapon {
   background: #1f1f1f;
   border: 1px solid #3fa9f5;
-  padding: 20px;
-  text-align: center;
-  font-size: 18px;
   border-radius: 4px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* 下パネル */
+/* 下パネル（ジョブ設定＋計算結果） */
 .bottom-panel {
+  display: flex;
+  gap: 20px;
   background: #2a2a2a;
   border-top: 2px solid #3fa9f5;
-  padding: 12px;
+  padding: 16px;
+}
+
+.panel-section {
+  flex: 1;
 }
 
 .panel-title {
