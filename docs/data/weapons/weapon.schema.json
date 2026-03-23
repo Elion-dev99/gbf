@@ -1,8 +1,118 @@
 {
-  "name": "ダインスレイブ",
-  "element": "闇",
-  "type": "剣",
-  "atk": 2000,
-  "hp": 100,
-  "skill": "通常攻刃"
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Weapon",
+  "type": "object",
+
+  "required": ["id", "name", "attribute", "type", "rarity", "atk", "hp"],
+
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "内部ID。ファイル名と一致させる"
+    },
+
+    "name": {
+      "type": "string",
+      "description": "武器名"
+    },
+
+    "attribute": {
+      "type": "string",
+      "enum": ["火", "水", "土", "風", "光", "闇"],
+      "description": "属性"
+    },
+
+    "type": {
+      "type": "string",
+      "enum": ["短剣", "剣", "槍", "斧", "杖", "銃", "格闘", "弓", "楽器", "刀"],
+      "description": "武器種"
+    },
+
+    "rarity": {
+      "type": "string",
+      "enum": ["N", "R", "SR", "SSR"],
+      "description": "レアリティ"
+    },
+
+    "series": {
+      "type": "string",
+      "description": "シリーズ名（六道、天司、オメガなど）"
+    },
+
+    "job_weapon": {
+      "type": "string",
+      "description": "ジョブ専用武器の場合のみ設定"
+    },
+
+    "obtain": {
+      "type": "string",
+      "description": "入手方法（イベント名、ガチャ、ショップなど）"
+    },
+
+    "level": {
+      "type": "number",
+      "description": "最大レベル（150/200など）"
+    },
+
+    "atk": {
+      "type": "object",
+      "required": ["min", "max"],
+      "properties": {
+        "min": { "type": "number" },
+        "max": { "type": "number" }
+      }
+    },
+
+    "hp": {
+      "type": "object",
+      "required": ["min", "max"],
+      "properties": {
+        "min": { "type": "number" },
+        "max": { "type": "number" }
+      }
+    },
+
+    "ougi": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    },
+
+    "skill1": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "type": { "type": "string" },
+        "size": { "type": ["string", "null"] },
+        "description": { "type": "string" }
+      }
+    },
+
+    "skill2": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "type": { "type": "string" },
+        "size": { "type": ["string", "null"] },
+        "description": { "type": "string" }
+      }
+    },
+
+    "skill3": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "type": { "type": "string" },
+        "size": { "type": ["string", "null"] },
+        "description": { "type": "string" }
+      }
+    },
+
+    "notes": {
+      "type": "string",
+      "description": "備考"
+    }
+  }
 }
