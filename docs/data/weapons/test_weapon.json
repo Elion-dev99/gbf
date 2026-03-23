@@ -1,0 +1,6 @@
+{
+  "name": "テスト武器",
+  "id": "weapon_test",
+  "attribute": "fire",
+  "type": "sword"
+}
