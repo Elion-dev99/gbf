@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="./style/gbft.css">
 </head>
 <body>
+
   <div class="layout">
 
     <!-- タブ -->
@@ -15,21 +16,26 @@
       <button class="tab">召喚石</button>
     </div>
 
-    <!-- 武器10枠 -->
-    <div class="weapon-grid">
-      <div class="weapon-slot">1</div>
-      <div class="weapon-slot">2</div>
-      <div class="weapon-slot">3</div>
-      <div class="weapon-slot">4</div>
-      <div class="weapon-slot">5</div>
-      <div class="weapon-slot">6</div>
-      <div class="weapon-slot">7</div>
-      <div class="weapon-slot">8</div>
-      <div class="weapon-slot">9</div>
-      <div class="weapon-slot">10</div>
+    <!-- 武器レイアウト（メイン1 + サブ9） -->
+    <div class="weapon-layout">
+
+      <!-- メイン武器（縦長） -->
+      <div class="main-weapon">1</div>
+
+      <!-- サブ武器9枠 -->
+      <div class="sub-weapon">2</div>
+      <div class="sub-weapon">3</div>
+      <div class="sub-weapon">4</div>
+      <div class="sub-weapon">5</div>
+      <div class="sub-weapon">6</div>
+      <div class="sub-weapon">7</div>
+      <div class="sub-weapon">8</div>
+      <div class="sub-weapon">9</div>
+      <div class="sub-weapon">10</div>
+
     </div>
 
-    <!-- ジョブ設定＋計算結果 -->
+    <!-- 下パネル（ジョブ設定＋計算結果） -->
     <div class="bottom-panel">
 
       <div class="panel-section">
@@ -49,5 +55,6 @@
     </div>
 
   </div>
+
 </body>
 </html>
