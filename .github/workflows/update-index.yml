@@ -1,0 +1,36 @@
+name: Update weapons index
+
+on:
+  push:
+    paths:
+      - "docs/data/weapons/*.json"
+      - "!docs/data/weapons/index.json"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install jq
+        run: |
+          sudo apt-get update || true
+          sudo apt-get install -y jq || true
+
+      - name: Generate index.json
+        run: |
+          cd docs/data/weapons || exit 0
+          ls *.json 2>/dev/null \
+            | grep -v index.json \
+            | grep -v weapon.schema.json \
+            | jq -R -s -c 'split("\n")[:-1]' > index.json || echo "[]" > index.json
+
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions" || true
+          git config user.email "actions@github.com" || true
+          git add index.json || true
+          git commit -m "Auto-update index.json" || true
+          git push || true
