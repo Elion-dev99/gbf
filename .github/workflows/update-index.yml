@@ -3,7 +3,7 @@ name: Update weapons index
 on:
   push:
     paths:
-      - "docs/data/weapons/*.json"
+      - "docs/data/weapons/**"
       - "!docs/data/weapons/index.json"
 
 jobs:
