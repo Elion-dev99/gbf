@@ -2,15 +2,52 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>My Tool</title>
-  <link rel="stylesheet" href="style.css">
+  <title>武器編成</title>
+  <link rel="stylesheet" href="./style/ff14.css">
 </head>
 <body>
+  <div class="layout">
 
-  <h1>グラブル攻略ツール（開発中）</h1>
+    <!-- タブ -->
+    <div class="tabs">
+      <button class="tab active">武器</button>
+      <button class="tab">キャラ</button>
+      <button class="tab">召喚石</button>
+    </div>
 
-  <div id="app">読み込み中...</div>
+    <!-- 武器10枠 -->
+    <div class="weapon-grid">
+      <div class="weapon-slot">1</div>
+      <div class="weapon-slot">2</div>
+      <div class="weapon-slot">3</div>
+      <div class="weapon-slot">4</div>
+      <div class="weapon-slot">5</div>
+      <div class="weapon-slot">6</div>
+      <div class="weapon-slot">7</div>
+      <div class="weapon-slot">8</div>
+      <div class="weapon-slot">9</div>
+      <div class="weapon-slot">10</div>
+    </div>
 
-  <script src="script.js"></script>
+    <!-- ジョブ設定＋計算結果 -->
+    <div class="bottom-panel">
+
+      <div class="panel-section">
+        <h2 class="panel-title">ジョブ設定</h2>
+        <div class="row"><span>ジョブ</span><input type="text"></div>
+        <div class="row"><span>ジョブアビ</span><input type="text"></div>
+        <div class="row"><span>Rank</span><input type="number"></div>
+      </div>
+
+      <div class="panel-section">
+        <h2 class="panel-title">計算結果</h2>
+        <div class="row"><span>表示攻撃力</span><span>0</span></div>
+        <div class="row"><span>予測ダメージ</span><span>0</span></div>
+        <div class="row"><span>クリティカル率</span><span>0%</span></div>
+      </div>
+
+    </div>
+
+  </div>
 </body>
 </html>
