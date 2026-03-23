@@ -1,30 +1,34 @@
-/* 武器レイアウト（メイン1 + サブ9） */
 .weapon-layout {
-  width: 100%;                     /* ← 下パネルと同じ幅にする */
+  width: 100%;
   display: grid;
-  grid-template-columns: 110px 85px 85px 85px;  /* ← 枠を小さくした最適値 */
-  grid-template-rows: repeat(3, 90px);          /* ← 高さも縮める */
-  gap: 8px;
-  justify-content: space-between;  /* ← 横幅いっぱいに広げる */
+  grid-template-columns: 100px 70px 70px 70px;
+  grid-template-rows: repeat(3, 70px);
+  gap: 6px;
+  justify-content: space-between;
 }
 
-/* メイン武器（縦長3マス） */
-.main-weapon {
-  grid-row: span 3;
-  background: #1f1f1f;
-  border: 2px solid #3fa9f5;
-  border-radius: 4px;
-}
-
-/* サブ武器 */
+.main-weapon,
 .sub-weapon {
-  background: #1f1f1f;
-  border: 1px solid #3fa9f5;
-  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.weapon-box {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .weapon-icon {
   width: 100%;
   height: 100%;
-  object-fit: contain;   /* ← 枠に合わせて縮む */
+  object-fit: cover;
+}
+
+.weapon-info {
+  font-size: 10px;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
 }
