@@ -1,0 +1,74 @@
+body {
+  background: #1a1a1a;
+  color: #e0e0e0;
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px;
+}
+
+/* タブ */
+.tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.tab {
+  background: #2a2a2a;
+  border: 1px solid #3fa9f5;
+  padding: 6px 12px;
+  color: #e0e0e0;
+}
+
+.tab.active {
+  background: #3fa9f5;
+  color: #000;
+}
+
+/* 武器枠 */
+.weapon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.weapon-slot {
+  background: #1f1f1f;
+  border: 1px solid #3fa9f5;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+/* 下パネル */
+.bottom-panel {
+  background: #2a2a2a;
+  border-top: 2px solid #3fa9f5;
+  padding: 12px;
+}
+
+.panel-title {
+  color: #3fa9f5;
+  border-bottom: 1px solid #3fa9f5;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+.row input {
+  width: 60%;
+  background: #1f1f1f;
+  border: 1px solid #555;
+  color: #e0e0e0;
+}
