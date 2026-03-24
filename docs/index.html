@@ -1,13 +1,54 @@
-<div class="ff-slot">
-  <div class="ff-frame">
-    <div class="ff-inner">
-      <img src="./assets/icons/sample.png" class="ff-icon">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ★ここが最重要：CSS のパスを正しく書く ★ -->
+  <link rel="stylesheet" href="style/gbftv2.css">
+
+  <title>FF14 Style UI</title>
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <div class="tabs">
+      <div class="tab active">武器編成</div>
+      <div class="tab">ジョブ設定</div>
+      <div class="tab">計算結果</div>
     </div>
+
+    <div class="weapon-layout">
+
+      <div class="ff-slot">
+        <div class="ff-frame">
+          <div class="ff-inner">
+            <img src="./assets/icons/sample.png" class="ff-icon">
+          </div>
+        </div>
+        <div class="ff-meta">
+          <span class="ff-name">武器名</span>
+          <span class="ff-il">Slv 15</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bottom-panel">
+      <div class="panel-section">
+        <div class="panel-title">ジョブ設定</div>
+        <div class="row"><span>ジョブ</span><input type="text"></div>
+      </div>
+
+      <div class="panel-section">
+        <div class="panel-title">計算結果</div>
+        <div class="row"><span>総合攻撃力</span><span>0</span></div>
+      </div>
+    </div>
+
   </div>
 
-  <div class="ff-meta">
-    <span class="ff-name">武器名</span>
-    <span class="ff-il">IL 650</span>
-  </div>
-</div>
-<link rel="stylesheet" href="style_v2.css">
+</body>
+</html>
