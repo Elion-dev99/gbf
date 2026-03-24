@@ -1,6 +1,6 @@
 /* 1枠全体 */
 .ff-slot {
-  width: 90px;               /* ← 小型化しても崩れない */
+  width: 90px;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -11,7 +11,7 @@
 .ff-frame {
   border: 2px solid #3fa9f5;
   border-radius: 4px;
-  padding: 3px;              /* 外枠 → 内枠の余白 */
+  padding: 3px;
   background: #1a1a1a;
 }
 
@@ -20,7 +20,7 @@
   background: #0f0f0f;
   border-radius: 3px;
   padding: 3px;
-  aspect-ratio: 1 / 1;       /* 正方形を維持 */
+  aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,4 +47,41 @@
 .ff-il {
   color: #3fa9f5;
   font-weight: bold;
+}
+
+/* ★ ここが重要：枠を並べるレイアウト ★ */
+.weapon-layout {
+  display: grid;
+  grid-template-columns: repeat(5, 90px);
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* 下パネル（最低限） */
+.bottom-panel {
+  margin-top: 20px;
+  padding: 16px;
+  background: #1a1a1a;
+  border-top: 2px solid #3fa9f5;
+  display: flex;
+  gap: 20px;
+}
+
+.panel-title {
+  color: #3fa9f5;
+  margin-bottom: 8px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+.row input {
+  width: 60%;
+  background: #0f0f0f;
+  border: 1px solid #555;
+  color: #e0e0e0;
 }
