@@ -1,125 +1,50 @@
-body {
-  background: #1a1a1a;
-  color: #e0e0e0;
-  font-family: "Noto Sans JP", sans-serif;
-  margin: 0;
-}
-
-.layout {
+/* 1枠全体 */
+.ff-slot {
+  width: 90px;               /* ← 小型化しても崩れない */
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 16px;
-  max-width: 700px;
-  margin: 0 auto;
+  gap: 4px;
+  font-size: 11px;
 }
 
-/* タブ */
-.tabs {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-}
-
-.tab {
-  background: #2a2a2a;
-  border: 1px solid #3fa9f5;
-  padding: 6px 14px;
-  color: #e0e0e0;
-}
-
-.tab.active {
-  background: #3fa9f5;
-  color: #000;
-}
-
-/* 武器レイアウト（小型化 + FF14風維持） */
-.weapon-layout {
-  display: grid;
-  grid-template-columns: 110px 85px 85px 85px;
-  grid-template-rows: repeat(3, 90px);
-  gap: 8px;
-  justify-content: center;
-}
-
-/* 外枠（FF14風の青枠 + 黒背景） */
-.main-weapon,
-.sub-weapon {
-  background: #1f1f1f;
-  border-radius: 4px;
-}
-
-.main-weapon {
+/* 外枠（青ライン） */
+.ff-frame {
   border: 2px solid #3fa9f5;
-  grid-row: span 3;
+  border-radius: 4px;
+  padding: 3px;              /* 外枠 → 内枠の余白 */
+  background: #1a1a1a;
 }
 
-.sub-weapon {
-  border: 1px solid #3fa9f5;
-}
-
-/* 内側（余白 + 情報） */
-.weapon-box {
-  padding: 8px;
+/* 内枠（黒背景） */
+.ff-inner {
+  background: #0f0f0f;
+  border-radius: 3px;
+  padding: 3px;
+  aspect-ratio: 1 / 1;       /* 正方形を維持 */
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 /* アイコン */
-.weapon-icon {
+.ff-icon {
   width: 100%;
-  height: auto;
-  border-radius: 4px;
-  border: 1px solid #3fa9f5;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
 }
 
-/* 武器名・Slv */
-.weapon-info {
+/* テキスト（名前・IL） */
+.ff-meta {
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
 }
 
-.weapon-name {
+.ff-name {
   color: #e0e0e0;
 }
 
-.weapon-slv {
+.ff-il {
   color: #3fa9f5;
   font-weight: bold;
-}
-
-/* 下パネル */
-.bottom-panel {
-  display: flex;
-  gap: 20px;
-  background: #2a2a2a;
-  border-top: 2px solid #3fa9f5;
-  padding: 16px;
-}
-
-.panel-section {
-  flex: 1;
-}
-
-.panel-title {
-  color: #3fa9f5;
-  border-bottom: 1px solid #3fa9f5;
-  margin-bottom: 8px;
-  padding-bottom: 4px;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  margin: 6px 0;
-}
-
-.row input {
-  width: 60%;
-  background: #1f1f1f;
-  border: 1px solid #555;
-  color: #e0e0e0;
 }
