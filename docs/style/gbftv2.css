@@ -49,7 +49,7 @@
   font-weight: bold;
 }
 
-/* ★ ここが重要：枠を並べるレイアウト ★ */
+/* ★ ここが最重要：枠を横に並べるレイアウト ★ */
 .weapon-layout {
   display: grid;
   grid-template-columns: repeat(5, 90px);
